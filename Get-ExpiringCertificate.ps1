@@ -1,5 +1,5 @@
 #Define log Source
-If (!(Get-EventLog -LogName Application -source Certificatecheck)){
+If (!(Get-EventLog -LogName Application -source Certificatecheck -erroraction SilentlyContinue)){
     New-EventLog -LogName Application -Source "CertificateCheck"
 }
 
